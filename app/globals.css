@@ -2,14 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot');
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot');
+  src: local('Gilroy Extrabold'), local('Gilroy-Extrabold'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
+  --background: whitesmoke;
   --foreground: #171717;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: Gilroy;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: gray;
     --foreground: #ededed;
   }
 }
@@ -17,11 +46,380 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Gilroy;
+
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.header {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 1486px;
+  height: 74px;
+  top: -27px;
+  left: -23px;
+  margin-top: 27px;
+  margin-left: 65px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #FFFFFF;
+  background: white;
+  border: 1px solid #827F9833
+}
+
+.history {
+  position: absolute;
+  width: 60px;
+  height: 18px;
+  top: 118px;
+  left: 180px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  text-align: right;
+  color: rgba(39, 109, 247, 1);
+}
+
+/* .view {
+  width: 149px;
+  height: 26px;
+  top: 110px;
+  left: 199px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26.4px;
+  text-align: left;
+} */
+
+.activated {
+  width: 86px;
+  height: 3px;
+  top: 72px;
+  left: 586px;
+  position: relative;
+  gap: 0px;
+  border-radius: 1px 0px 0px 0px;
+  opacity: 0px;
+  background: #FFFFFF;
+  border: 1px solid #827F9833;
+  background: #276DF7;
+}
+
+.button {
+  background-color: rgba(31, 90, 244, 1);
+  color: white;
+  width: 183.46px;
+  height: 52.17px;
+  top: 94px;
+  left: 1124px;
+  gap: 0px;
+  opacity: 0px;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.button:hover {
+  background-color: rgb(76, 76, 178);
+  color: white;
+  width: 183.46px;
+  height: 52.17px;
+  top: 94px;
+  left: 1124px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: large;
+}
+
+.view {
+  width: 82px;
+  height: 36px;
+  top: 471px;
+  left: 1187px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid rgba(39, 109, 247, 0.6);
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(39, 109, 247, 1);
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px
+}
+
+.pSum {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  color: rgba(38, 38, 38, 0.6);
+}
+
+.inputSearch {
+  width: 290px;
+  height: 40px;
+  top: 203px;
+  left: 1017px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  border: 1px solid rgba(207, 207, 207, 1)
+}
+
+.pControl {
+  width: 372px;
+  height: 30px;
+  top: 1319px;
+  left: 897px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 5px;
+  width: 1180px;
+  /* margin: -10px auto 10px; */
+}
+
+.demo {
+  width: 198px;
+  height: 39px;
+  top: 105px;
+  left: 846px;
+  gap: 0px;
+  opacity: 0.7px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: right;
+  color: rgba(42, 42, 42, 1);
+}
+
+.demo span {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 19px;
+  text-align: right;
+}
+
+.pn-text {
+  /* position:relative; */
+  width: 89px;
+  height: 26px;
+  top: 111px;
+  left: 120px;
+  color: rgba(42, 42, 42, 1);
+  gap: 0px;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26.4px;
+  text-align: left;
+  /* margin-left: 50px; */
+}
+
+.pn-text1 {
+  position: absolute;
+  width: 250px;
+  height: 26px;
+  top: 111px;
+  left: 240px;
+  color: rgba(42, 42, 42, 1);
+  gap: 1px;
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26.4px;
+  text-align: left;
+  /* margin-left: 50px; */
+}
+
+.search {
+  margin-top: 30px;
+}
+
+.divider {
+  margin: 20px auto;
+  width: 1486px;
+  height: 0px;
+  top: 173px;
+  left: -23px;
+  gap: 0px;
+  border: 0.5px 0px 0px 0px;
+  opacity: 0px;
+  border: 0.5px solid rgba(207, 207, 207, 1);
+}
+
+.table-layout {
+  width: 1180px;
+  margin: 0 auto;
+  background-color: white;
+  /* margin-top: 25px; */
+  margin: 25px auto;
+}
+
+table {
+  width: 1180px;
+  display: block;
+  margin: auto;
+  /* margin-left: 25px; */
+
+}
+
+td {
+  font-size: 14px;
+  background-color: white;
+  min-width: 71px;
+  max-width: 148px;
+  height: 40px;
+  margin: 25px 15px;
+  font-weight: 400;
+  color: rgba(42, 42, 42, 1);
+}
+
+tr {
+  margin: 10px auto;
+  justify-content: left;
+  height: 65px;
+  border-bottom: 1px solid rgb(228, 225, 225);
+  align-items: left;
+
+}
+
+th {
+  font-size: 14px;
+  background-color: white;
+  min-width: 71px;
+  max-width: 148px;
+  height: 40px;
+  margin: 50px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-align: left;
+
+  margin: 45px;
+  color: rgba(42, 42, 42, 0.7);
+}
+
+th:last-child {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 25px;
+  font-size: 14px;
+  background-color: white;
+  min-width: 71px;
+  max-width: 148px;
+  height: 14px;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-align: left;
+  /* margin-left: 85px; */
+  color: rgba(42, 42, 42, 0.7);
+}
+
+.completed {
+  width: 124px;
+  height: 36px;
+  display: flex;
+  background-color: rgba(1, 168, 90, 0.2);
+  color: rgba(1, 168, 90, 1);
+  ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.duePaid {
+  width: 107px;
+  height: 36px;
+  display: flex;
+  background-color: rgba(255, 122, 0, .2);
+  color: rgba(255, 122, 0, 1);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.dueUnpaid {
+  width: 124px;
+  height: 36px;
+  display: flex;
+  background-color: rgba(244, 44, 31, .2);
+  ;
+  color: rgba(244, 44, 31, 1);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.assigned {
+  width: 94px;
+  height: 36px;
+  display: flex;
+  background-color: rgba(0, 106, 231, .2);
+  color: rgba(0, 106, 231, 1);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.paid {
+  width: 80px;
+  height: 36px;
+  display: flex;
+  background-color: rgba(1, 168, 90, 0.2);
+  color: rgba(1, 168, 90, 1);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+
 }

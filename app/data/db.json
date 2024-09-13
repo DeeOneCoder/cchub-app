@@ -1,0 +1,104 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Oluwaseun Aregbesola",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Completed",
+      "statClass": "completed"
+    },
+    {
+      "id": 2,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Stella Omatoye",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Completed",
+      "statClass": "completed"
+    },
+    {
+      "id": 3,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Chinyere Okafor",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Due & Paid",
+      "statClass": "duePaid"
+    },
+    {
+      "id": 4,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Mohammed Danladi",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Due & Unpaid",
+      "statClass": "dueUnpaid"
+    },
+    {
+      "id": 5,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Michael Aribisala",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Assigned",
+      "statClass": "assigned"
+    },
+    {
+      "id": 6,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Donatus Emefiele",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Assigned",
+      "statClass": "assigned"
+    },
+    {
+      "id": 7,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Donatus Emefiele",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Completed",
+      "statClass": "completed"
+    },
+    {
+      "id": 8,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Donatus Emefiele",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Due & Paid",
+      "statClass": "duePaid"
+    },
+    {
+      "id": 9,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Donatus Emefiele",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Due & Unpaid",
+      "statClass": "dueUnpaid"
+    },
+    {
+      "id": 10,
+      "hospitalId": "1AFHFH093",
+      "patientName": "Donatus Emefiele",
+      "phoneNumber": "+2347068642920",
+      "nextDate": "12th September 2020",
+      "location": "VI, Lagos",
+      "status": "Paid",
+      "statClass": "paid"
+    }
+  ]
+}
