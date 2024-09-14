@@ -16,9 +16,11 @@ export default function FirstLayout({
   return (
     <html lang="en">
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
+        <div style={{ position: "relative" }}>
+          <Header />
+        </div>
         {children}
       </body>
     </html>

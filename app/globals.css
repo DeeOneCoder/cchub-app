@@ -58,7 +58,6 @@ body {
 }
 
 .header {
-  display: block;
   position: relative;
   margin: 0 auto;
   width: 1486px;
@@ -73,6 +72,87 @@ body {
   background-color: #FFFFFF;
   background: white;
   border: 1px solid #827F9833
+}
+
+.right-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  font-size: 14px;
+  height: 36px;
+  top: 232px;
+  left: 851px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.edit {
+  display: flex;
+  flex-direction: row;
+  height: 47px;
+  align-items: center;
+  border: 1px solid rgba(31, 90, 244, 1);
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.middle {
+  display: flex;
+  /* position: relative; */
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 210px;
+  height: 70px;
+}
+
+.info {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(130, 127, 152, 1);
+}
+
+.rightP {
+  position: absolute;
+  display: flex;
+  width: 893px;
+  height: 644px;
+  top: 213px;
+  left: 452px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: white;
+}
+
+.actinfo {
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+  color: rgba(39, 109, 247, 1);
+  border-bottom: 4px solid rgba(39, 109, 247, 1);
+}
+
+.payment {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 246px;
+  font-size: 14px;
+  height: 36px;
+  top: 232px;
+  left: 485px;
+  gap: 0px;
+  opacity: 0px;
 }
 
 .history {
@@ -207,8 +287,39 @@ body {
   /* margin: -10px auto 10px; */
 }
 
+
+.leftP {
+  position: absolute;
+  width: 239px;
+  height: 175px;
+  top: 213px;
+  left: 185px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: white;
+}
+
+.smallest {
+  font-size: 12px;
+  font-family: Gilroy;
+  padding: 20px 30px;
+}
+
+.details {
+  font-size: 14px;
+  font-family: Gilroy;
+  padding: 18px 30px;
+  font-weight: 600;
+  color: rgba(42, 42, 42, 0.7);
+}
+
+.active {
+  background-color: rgba(39, 109, 247, 0.1);
+  border-right: 4px solid rgba(39, 109, 247, 1);
+}
+
 .demo {
-  width: 198px;
+  width: 215px;
   height: 39px;
   top: 105px;
   left: 846px;
