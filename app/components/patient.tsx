@@ -23,7 +23,7 @@ const Patients: React.FC = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch('http://localhost:9000/patients');
+        const response = await fetch('http://localhost:9000/patients', { cache: "no-store" });
         const data: Patient[] = await response.json();
         setPatients(data);
         setLoading(false);

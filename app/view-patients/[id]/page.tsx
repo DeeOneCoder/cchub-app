@@ -17,26 +17,42 @@ interface Patient {
     status: string;
     statClass: string;
     email: string;
+    deliveryAddress: string;
 }
 
 const ViewPatient: React.FC = () => {
     const { id } = useParams(); // Get the patient id from the URL
     const [patient, setPatient] = useState<Patient | null>(null); // State for the fetched patient
     const [loading, setLoading] = useState<boolean>(true); // Loading state
+    const [pH, setPH] = useState("Patient's Information ");
+    const [pI, setPI] = useState("Personal information about patient");
+
 
     const activateLink = () => {
         // const activeButton = e;
         const butt1 = document.getElementById('patientInfo');
         const butt2 = document.getElementById('deliveryInfo');
+        const patInfo = document.getElementById('patient-info');
+        const delInfo = document.getElementById('delivery-info');
+        // const pH = document.getElementById('pif-h');
+        // const pI = document.getElementById('pif-i');
+
+
         if (butt1?.classList.contains("actinfo")) {
             butt1?.classList.remove('actinfo');
-            butt2?.classList.remove('actinfo');
             butt2?.classList.add('actinfo');
+            delInfo?.classList.remove('hidden');
+            patInfo?.classList.add('hidden');
+            setPH('Delivery Information');
+            setPI('Information about delivery status');
 
         } else {
-            butt1?.classList.remove('actinfo');
             butt2?.classList.remove('actinfo');
             butt1?.classList.add('actinfo');
+            patInfo?.classList.remove('hidden');
+            delInfo?.classList.add('hidden');
+            setPH("Patient's Information");
+            setPI('Personal Information about patient');
         }
 
     }
@@ -47,7 +63,13 @@ const ViewPatient: React.FC = () => {
     useEffect(() => {
         const fetchPatient = async () => {
             try {
-                const response = await fetch(`http://localhost:9000/patients/${id}`);
+                const response = await fetch(`http://localhost:9000/patients/${id}`,
+                    {
+                        next: {
+                            revalidate: 20
+                        }
+                    }
+                );
                 if (!response.ok) {
                     throw new Error('Failed to fetch patient details');
                 }
@@ -115,7 +137,7 @@ const ViewPatient: React.FC = () => {
             <div className="leftP">
                 <p className="smallest">Patient</p>
                 <p className="details active">Rider&lsquo;s Profile</p>
-                <p className="details">Deliver History</p>
+                <p className="details">Delivery History</p>
             </div>
 
             <div className="rightP">
@@ -133,7 +155,7 @@ const ViewPatient: React.FC = () => {
                 </div>
                 <div className="right-nav">
                     <div className="p-info">
-                        <button id='patientInfo' className='info' onClick={activateLink}>Patient Information</button>
+                        <button id='patientInfo' className='info actinfo' onClick={activateLink}>Patient Information</button>
                     </div>
                     <div className="d-info">
                         <button id='deliveryInfo' className='info' onClick={activateLink}>Delivery Information</button>
@@ -151,18 +173,18 @@ const ViewPatient: React.FC = () => {
                 position: "absolute"
 
             }}>
-                <p style={{
+                <p id='pif-h' style={{
                     fontFamily: "Gilroy",
                     fontWeight: "700",
                     fontSize: "20px",
                     marginBottom: "5px"
-                }}>Patient&lsquo;s Information</p>
-                <p style={{
+                }}>{pH}</p>
+                <p id='pif-i' style={{
                     fontWeight: "400",
                     fontSize: "16px",
                     color: "rgba(42, 42, 42, 1)"
 
-                }}>Personal information about patient</p>
+                }}>{pI}</p>
                 <div className='edit' style={{
                     color: "rgba(31, 90, 244, 1)",
                     fontWeight: "600",
@@ -176,7 +198,7 @@ const ViewPatient: React.FC = () => {
                             marginRight: "10px",
 
                         }}
-                    /> Edit Patient&lsquo;s information</div>
+                    /> Edit {pH}</div>
             </div>
 
             <div className="display-toggle">
@@ -295,7 +317,7 @@ const ViewPatient: React.FC = () => {
                         </p>
                     </div>
 
-                    <button className='button' type='button' style={{
+                    <button className='button inactive' type='button' disabled={true} style={{
                         position: 'absolute',
                         top: "780px",
                         left: "1100px"
@@ -304,7 +326,107 @@ const ViewPatient: React.FC = () => {
 
 
 
-                <div className="delivery-info hidden" id='delivery-info'></div>
+                <div className="delivery-info hidden" id='delivery-info'>
+                    <div className="input-d" style={{
+                        width: "435px",
+                        position: "absolute",
+                        top: "327px",
+                        left: "851px",
+                        border: "1px solid black",
+                        padding: "10px",
+                        backgroundColor: "rgba(239, 239, 239, 1)"
+
+                    }}>
+                        <p className="label" style={{ fontSize: "14px", marginBottom: "5px" }}>
+                            Next Delivery Date
+                        </p>
+                        <p className="label-detail" style={{ fontSize: "18px", fontWeight: "600" }}>
+                            {patient.nextDate}
+                        </p>
+                    </div>
+                    <div className="input-d middle" style={{
+                        width: "455px",
+                        position: "absolute",
+                        top: "417px",
+                        left: "840px",
+                        // border: "1px solid black",
+                        padding: "10px",
+                        justifyContent: 'space-between'
+                        // backgroundColor: "rgba(239, 239, 239, 1)"
+
+                    }}>
+                        <div className='center input-d ' style={{
+                            border: "1px solid black",
+                            backgroundColor: "rgba(239, 239, 239, 1)",
+                            padding: "10px",
+                            width: "455px"
+
+                        }}>
+                            <p className="label" style={{
+                                fontSize: "14px", marginBottom: "5px",
+                            }}>
+                                Delivery Area
+                            </p>
+                            <p className="label-detail" style={{ fontSize: "18px", fontWeight: "600" }}>
+                                {patient.location}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div className="input-d middle" style={{
+                        width: "455px",
+                        position: "absolute",
+                        top: "517px",
+                        left: "840px",
+                        // border: "1px solid black",
+                        padding: "10px",
+                        justifyContent: 'space-between'
+                        // backgroundColor: "rgba(239, 239, 239, 1)"
+
+                    }}>
+                        <div className='center input-d ' style={{
+                            border: "1px solid black",
+                            backgroundColor: "rgba(239, 239, 239, 1)",
+                            padding: "10px",
+                            width: "455px"
+
+                        }}>
+                            <p className="label" style={{
+                                fontSize: "14px", marginBottom: "5px",
+                            }}>
+                                Delivery Address
+                            </p>
+                            <p className="label-detail" style={{ fontSize: "18px", fontWeight: "600" }}>
+                                {patient.deliveryAddress}
+                            </p>
+                        </div>
+
+                    </div>
+                    <div className="input-d" style={{
+                        width: "210px",
+                        position: "absolute",
+                        top: "627px",
+                        left: "851px",
+                        border: "1px solid black",
+                        padding: "10px",
+                        backgroundColor: "rgba(239, 239, 239, 1)"
+
+                    }}>
+                        <p className="label" style={{ fontSize: "14px", marginBottom: "5px" }}>
+                            Payment Status
+                        </p>
+                        <p className="label-detail" style={{ fontSize: "18px", fontWeight: "600" }}>
+                            {patient.status}
+                        </p>
+                    </div>
+
+                    <button className='button inactive' type='button' disabled={true} style={{
+                        position: 'absolute',
+                        top: "780px",
+                        left: "1100px"
+                    }}>Save Changes</button>
+                </div>
 
             </div>
 

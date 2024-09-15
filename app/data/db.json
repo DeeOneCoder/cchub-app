@@ -5,66 +5,72 @@
       "hospitalId": "1AFHFH093",
       "patientName": "Oluwaseun Aregbesola",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "19th September 2020",
       "location": "VI, Lagos",
       "status": "Completed",
       "statClass": "completed",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 2,
       "hospitalId": "1AFHFH093",
       "patientName": "Stella Omatoye",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "21st September 2020",
       "location": "VI, Lagos",
       "status": "Completed",
       "statClass": "completed",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 3,
       "hospitalId": "1AFHFH093",
       "patientName": "Chinyere Okafor",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "14th November 2020",
       "location": "VI, Lagos",
       "status": "Due & Paid",
       "statClass": "duePaid",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 4,
       "hospitalId": "1AFHFH093",
       "patientName": "Mohammed Danladi",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "1st August 2020",
       "location": "VI, Lagos",
       "status": "Due & Unpaid",
       "statClass": "dueUnpaid",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 5,
       "hospitalId": "1AFHFH093",
       "patientName": "Michael Aribisala",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "18th September 2020",
       "location": "VI, Lagos",
       "status": "Assigned",
       "statClass": "assigned",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 6,
       "hospitalId": "1AFHFH093",
       "patientName": "Donatus Emefiele",
       "phoneNumber": "+2347068642920",
-      "nextDate": "12th September 2020",
+      "nextDate": "29th September 2020",
       "location": "VI, Lagos",
       "status": "Assigned",
       "statClass": "assigned",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
       "location": "VI, Lagos",
       "status": "Completed",
       "statClass": "completed",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
       "location": "VI, Lagos",
       "status": "Due & Paid",
       "statClass": "duePaid",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
       "location": "VI, Lagos",
       "status": "Due & Unpaid",
       "statClass": "dueUnpaid",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
       "location": "VI, Lagos",
       "status": "Paid",
       "statClass": "paid",
-      "email": "seunregbesola@gmail.com"
+      "email": "seunregbesola@gmail.com",
+      "deliveryAddress": "19 Mohammed Abiola Street, Akoka, Lagos"
     }
   ]
 }

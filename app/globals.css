@@ -57,6 +57,83 @@ body {
   }
 }
 
+.login {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  width: 644px;
+  height: 900;
+  background-color: white;
+}
+
+.login-email {
+  position: absolute;
+  width: 339.89px;
+  height: 60px;
+  top: 330px;
+  left: 153px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  font-size: 14px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.login-pword {
+  position: absolute;
+  width: 339.89px;
+  height: 60px;
+  top: 406px;
+  left: 153px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  padding-left: 20px;
+}
+
+.show {
+  position: absolute;
+  width: 339.89px;
+  height: 60px;
+  top: 426px;
+  left: 410px;
+  gap: 0px;
+  padding-left: 20px;
+}
+
+.remember {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 339.89px;
+  height: 60px;
+  top: 456px;
+  left: 153px;
+  gap: 0px;
+  color: black;
+  align-items: center;
+  /* padding-left: 20px; */
+}
+
+.bottom {
+  position: absolute;
+  width: 206px;
+  height: 23px;
+  top: 680px;
+  left: 220px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
 .header {
   position: relative;
   margin: 0 auto;
@@ -98,6 +175,8 @@ body {
   justify-content: center;
   margin-top: 25px;
 }
+
+
 
 .middle {
   display: flex;
@@ -153,6 +232,10 @@ body {
   left: 485px;
   gap: 0px;
   opacity: 0px;
+}
+
+.hidden {
+  display: none;
 }
 
 .history {
